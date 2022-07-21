@@ -60,5 +60,36 @@ yarn lint:fix
 
 after creating lint & lint:fix in script section of package.json
 
+## Git hooks - husky 
 
+Automate the process of running ** lint:fix ** on the code after the developer is done working.
 
+Install 2 packages :
+1. Husky 
+2. lint-staged 
+
+```
+cd scss
+yarn add --dev husky lint-staged
+```
+
+and in package.json -
+
+```javascript
+{
+  
+"husky":{
+    "hooks":{
+      "pre-commit":"lint-staged"
+    }
+  },
+
+  "lint-staged":{
+    "*.scss":"yarn lint:fix"
+  }
+
+}
+
+```
+
+** lint-staged uses husky to run commands only on files that we staged before commits ** 
