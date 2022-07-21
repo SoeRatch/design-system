@@ -16,3 +16,8 @@ css resets : normalize scss is a great package . it makes browser element render
   cd scss
   yarn init -y
 ```
+
+```
+cd scss
+yarn add normalize-scss
+```
