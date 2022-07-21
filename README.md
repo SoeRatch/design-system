@@ -70,7 +70,7 @@ Install 2 packages :
 
 ```
 cd scss
-yarn add --dev husky lint-staged
+yarn add --dev husky@4 lint-staged
 ```
 
 and in package.json -
