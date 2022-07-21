@@ -9,29 +9,20 @@
  *
  */
 
- @mixin tablet {
+@mixin tablet {
+  @media (min-width: map-get($breakpoints,"md")) {
+    @content;
+  }
+}
 
-    @media(min-width:map-get($breakpoints,'md')){
+@mixin laptop {
+  @media (min-width: map-get($breakpoints,"lg")) {
+    @content;
+  }
+}
 
-        @content;
-        
-    }
- }
-
- @mixin laptop {
-
-    @media(min-width:map-get($breakpoints,'lg')){
-
-        @content;
-        
-    }
- }
-
- @mixin desktop {
-
-    @media(min-width:map-get($breakpoints,'xl')){
-
-        @content;
-        
-    }
- }
+@mixin desktop {
+  @media (min-width: map-get($breakpoints,"xl")) {
+    @content;
+  }
+}
