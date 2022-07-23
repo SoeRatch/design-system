@@ -93,3 +93,36 @@ and in package.json -
 ```
 
 ** lint-staged uses husky to run commands only on files that we staged before commits ** 
+
+## compiling scss to css 
+
+- install
+```
+cd scss
+yarn add --dev node-sass
+```
+
+- make build file inside src folder
+```
+cd scss/src
+mkdir scripts
+cd scripts
+touch build.js
+```
+- make lib folder to output the css file - global.css
+```
+cd scss/src
+mkdir lib
+```
+- and in package.json -
+
+```javascript
+{
+  
+"scripts": {
+    "build": "node src/scripts/build.js"
+  },
+
+}
+
+```
