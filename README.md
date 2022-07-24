@@ -126,3 +126,88 @@ mkdir lib
 }
 
 ```
+
+
+## MONO REPOSITORY STRATEGY 
+
+- move scss to packages
+```
+mkdir packages
+mv scss packages/
+```
+
+- new npm roject at root 
+
+```
+yarn init -y
+```
+
+- install lerna 
+** Lerna is a fast modern build system for managing and publishing multiple JavaScript/TypeScript packages from the same repository. **
+It helps publish our packages to npm very easily . 
+
+```
+yarn add --dev lerna 
+```
+
+- initialize a new lerna project 
+```
+yarn lerna init 
+```
+it will create a lerna.json file 
+
+- modify lerna.json 
+```javascript
+{
+  "packages": [
+    "packages/*"
+  ],
+  "useWorkspaces": true,
+  "npmClient": "yarn",
+  "version": "0.0.0",
+  "stream":true
+}
+
+```
+
+- modify root package.json
+```javascript
+{
+  
+"workspaces": {
+    "packages":[
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/normalize-scss"
+    ]
+  },
+  "private":true
+}
+
+```
+
+- now when you run yarn , it will install root packages as well as all the packages inside packages folder in the top root . 
+```
+yarn 
+```
+* check the packages in root node_modules *
+
+
+- use lerna to run specific script in all of our packages . for eg , in root package.json 
+
+```javascript
+{
+  
+"scripts": {
+    "build": "yarn lerna run build"
+  },
+
+}
+
+```
+* most of our packages will have build step and one build command will run all the build step inside all packages *
+ 
+```
+yarn build
+```

@@ -1,0 +1,23 @@
+{
+  "name": "@dsys.e/core",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:SoeRatch/design-system.git",
+  "author": "SoeRatch <surajkoho@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^5.2.0"
+  },
+  "workspaces": {
+    "packages":[
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/normalize-scss"
+    ]
+  },
+  "private":true,
+  "scripts": {
+    "build": "yarn lerna run build"
+  }
+}
