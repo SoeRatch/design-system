@@ -347,3 +347,42 @@ it will create a dist folder and run on port 3000
 
 - install nodemon 
 - add dev script with nodemon command 
+
+
+## extract foundation to seaparate package
+
+- make foundation folder inside packages
+
+```
+cd packages
+mkdir foundation
+```
+
+- initialize foundation package
+```
+cd packages/foundation
+yarn init -y
+```
+
+- install dev dependencies 
+
+```
+yarn add --dev typescript
+```
+
+- create tsconfig.json for typescript and paste in the basic configuration and make it minimal 
+```
+touch tsconfig.json
+```
+
+- add build script in packages/foundation/package.json
+```javascript
+{
+  
+  "scripts": {
+    "build":"tsc",
+    "dev":"yarn build -w"
+  }
+}
+
+```
