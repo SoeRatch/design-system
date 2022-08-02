@@ -341,3 +341,9 @@ yarn add --dev react-dom @types/react-dom
 yarn dev 
 ```
 it will create a dist folder and run on port 3000 
+
+
+## dev script for all packages 
+
+- install nodemon 
+- add dev script with nodemon command 
