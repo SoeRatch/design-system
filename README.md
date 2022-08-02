@@ -249,3 +249,33 @@ mkdir atoms
 mkdir molecules
 mkdir foundation 
 ```
+
+## Build the package for production to a suitable format so that we can ship to NPM 
+
+- install a bundler called rollup 
+
+```
+cd packages/react
+yarn add --dev rollup rollup-plugin-typescript2
+```
+- create rollup.config.js file
+```
+touch rollup.config.js
+```
+
+- add build script in package.json
+```javascript
+{
+  
+"scripts":{
+    "build":"rollup -c "
+  }
+
+}
+
+```
+
+- run yarn build and it will compile src/index.ts file to lib folder 
+```
+yarn build 
+```
