@@ -211,3 +211,41 @@ yarn
 ```
 yarn build
 ```
+
+## REACT Package
+
+- make react package
+```
+cd packages
+mkdir react
+```
+
+- initialize react package
+```
+cd packages/react
+yarn init -y
+```
+
+- install dev dependencies 
+
+```
+yarn add --dev react @types/react typescript
+```
+
+- create tsconfig.json for typescript and paste in the basic configuration 
+```
+touch tsconfig.json
+```
+
+- create src folder
+```
+mkdir src 
+```
+
+- create atoms, molecules and foundation inside src folder
+```
+cd src
+mkdir atoms
+mkdir molecules
+mkdir foundation 
+```
