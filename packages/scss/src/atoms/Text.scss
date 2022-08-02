@@ -1,0 +1,12 @@
+@import "foundation/all";
+
+.dsyse-text{
+    margin: 0;
+} 
+
+
+@each $size,$value in $fs {
+    .dsyse-text-#{$size} {
+        font-size: $value;
+    }
+}
