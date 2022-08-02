@@ -4,7 +4,7 @@ export default {
 
     input :[
         'src/index.ts',
-        'src/atoms/Button/index.ts'
+        'src/atoms/Color/index.ts'
     ],
 
     output:{

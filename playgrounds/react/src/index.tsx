@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM  from "react-dom";
 
-import { Button } from "@dsys.e/react";
+import { Color,Spacing } from "@dsys.e/react";
 
-import "@dsys.e/scss/lib/Button.css";
+import "@dsys.e/scss/lib/Utilities.css";
 
 ReactDOM.render(
-    <Button label="Example button"/>,
+    <Color hexCode="#000" width={Spacing.lg} height={Spacing.lg}/>,
     document.querySelector('#root')
 )
