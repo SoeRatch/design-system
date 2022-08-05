@@ -13,8 +13,7 @@ interface SelectOption {
 interface SelectProps {
     onOptionSelected: ( option:SelectOption, optionIndex:number )=> void,
     options?: SelectOption[],
-    label?: string,
-    renderOption?: ( props:renderOptionProps ) => React.ReactNode
+    label?: string
 }
 
 const Select: React.FC<SelectProps> = ({ options=[],label="Please Select an option", onOptionSelected:handler }) =>{
