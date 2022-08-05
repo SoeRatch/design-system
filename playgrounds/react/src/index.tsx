@@ -29,7 +29,8 @@ const option =[
 
 ReactDOM.render(
     <div style={{padding:'40px'}}>
-        <Select options={option} renderOption={({option,getOptionRecommendedProps})=><p {...getOptionRecommendedProps()}>{option.label}</p>} />
+        <Select options={option}  />
+        {/* <Select options={option} renderOption={({option,getOptionRecommendedProps})=><p {...getOptionRecommendedProps()}>{option.label}</p>} /> */}
     </div>,
     
 
