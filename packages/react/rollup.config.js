@@ -5,7 +5,8 @@ export default {
     input :[
         'src/index.ts',
         'src/atoms/Color/index.ts',
-        'src/atoms/Image/index.ts'
+        'src/atoms/Image/index.ts',
+        'src/atoms/Margin/index.ts'
     ],
 
     output:{
@@ -18,6 +19,6 @@ export default {
 
     preserveModules:true,
 
-    external:['react']
+    external:['react','@dsys.e/foundation']
 
 }

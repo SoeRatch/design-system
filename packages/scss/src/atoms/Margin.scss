@@ -1,0 +1,16 @@
+@import "foundation/all";
+
+$sides : left,right,top,bottom;
+
+@each $space,$value in $spacing {
+    .dsyse-margin-#{$space}{
+        margin: $value;
+    }
+
+    @each $side in $sides {
+        .dsyse-margin-#{$side}-#{$space} {
+            margin-#{$side}: $value;
+        }
+    }
+}
+
